@@ -30,6 +30,13 @@ const Upload = () => {
     );
     console.log(res);
   };
+
+  const getCookie = async () => {
+    const res = await axios.get(`${BACKEND_URL}/getCookie`, {
+      withCredentials: true,
+    });
+    console.log(res);
+  };
   return (
     <div>
       <form onSubmit={submitFile}>
@@ -38,6 +45,7 @@ const Upload = () => {
         <input type="submit" />
       </form>
       <button onClick={setCookie}>set cookie</button>
+      <button onClick={getCookie}>Get cookie</button>
     </div>
   );
 };
