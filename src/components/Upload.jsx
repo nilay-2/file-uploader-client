@@ -21,7 +21,7 @@ const Upload = () => {
   };
 
   const setCookie = async () => {
-    const res = await axios.get(`${BACKEND_URL}/setCookie`);
+    const res = await axios.post(`${BACKEND_URL}/setCookie`, { hi: "hello" });
     console.log(res);
   };
   return (
